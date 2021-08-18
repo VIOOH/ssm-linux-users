@@ -2,19 +2,14 @@
 
 echo "Checking if ssm-admin exists.."
 
-whoami
-
-id -u ssm-admin
+id -u admin-ssm
 
 if [[ $? != 0 ]]
 then
-  echo "Creating ssm-admin user account."
-  useradd -m ssm-admin
-  passwd -d ssm-admin
-  usermod -a -G sudo ssm-admin
+  echo "ssm-admin doesn't exist"
 else
   echo "ssm-admin already exists"
-  usermod -a -G wheel ssm-admin
+  userdel ssm-admin
 fi
 
 echo "Checking if ssm-basic exists.."
