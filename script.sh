@@ -2,6 +2,8 @@
 
 echo "Checking if ssm-admin exists.."
 
+whoami
+
 id -u ssm-admin
 
 if [[ $? != 0 ]]
