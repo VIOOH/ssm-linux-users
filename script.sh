@@ -12,6 +12,7 @@ then
   usermod -a -G sudo ssm-admin
 else
   echo "ssm-admin already exists"
+  usermod -a -G wheel ssm-admin
 fi
 
 echo "Checking if ssm-basic exists.."
