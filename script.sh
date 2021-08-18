@@ -2,7 +2,7 @@
 
 echo "Checking if ssm-admin exists.."
 
-id -u admin-ssm
+id -u ssm-admin
 
 if [[ $? != 0 ]]
 then
