@@ -8,11 +8,12 @@ if [[ $? != 0 ]]
 then
   echo "Creating ssm-admin user account."
   useradd -m ssm-admin
-  passwd -d ssm-admin
+  sudo passwd -d ssm-admin
   usermod -a -G sudo ssm-admin
 else
   echo "ssm-admin already exists"
   usermod -a -G wheel ssm-admin
+  sudo passwd -d ssm-admin
 fi
 
 echo "Checking if ssm-basic exists.."
