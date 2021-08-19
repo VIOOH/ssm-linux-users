@@ -10,8 +10,7 @@ then
   useradd -m ssm-admin
   usermod -a -G sudo ssm-admin
   usermod -a -G wheel ssm-admin
-  echo "ssm-admin ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/ssm-agent-users
-  chmod 0440 /etc/sudoers.d/ssm-agent-users
+  echo "ssm-admin ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 else
   echo "ssm-admin already exists"
 fi
