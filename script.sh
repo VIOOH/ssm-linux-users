@@ -4,6 +4,8 @@ echo "Checking if ssm-admin exists.."
 
 id -u ssm-admin
 
+userdel ssm-admin
+
 if [[ $? != 0 ]]
 then
   echo "ssm-admin doesn't exist"
